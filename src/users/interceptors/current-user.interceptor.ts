@@ -16,5 +16,4 @@ export class CurrentUserInterceptor implements NestInterceptor {
 
     return handler.handle();
   }
-
 }

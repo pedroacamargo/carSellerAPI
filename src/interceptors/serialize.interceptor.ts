@@ -25,7 +25,8 @@ export class SerializeInterceptor implements NestInterceptor {
     // by a request handler
     
     return handler.handle().pipe(
-      map((data: any) => { // data ->  outgoing data that is going outside our response
+      map((data: any) => { 
+        // data ->  outgoing data that is going outside our response
         // Run something before the response is sent out
         return plainToInstance(this.dto,data, {
           excludeExtraneousValues: true // will return just @Expose values
